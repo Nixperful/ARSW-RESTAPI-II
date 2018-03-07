@@ -6,7 +6,7 @@ var RestControllerModule = (function () {
               callback.onSuccess(response["data"]);
           })
           .catch(function (err) {
-              callback.onFailure(err);
+              callback.onFailed(err);
           });
   }
 
