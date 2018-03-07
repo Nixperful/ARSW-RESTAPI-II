@@ -3,7 +3,7 @@ var RestControllerModule = (function () {
   var getOrders = function (callback) {
       axios.get('/orders')
           .then(function (response) {
-              callback.onSuccess(response);
+              callback.onSuccess(response["data"]);
           })
           .catch(function (err) {
               callback.onFailure(err);

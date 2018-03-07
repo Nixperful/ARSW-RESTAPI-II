@@ -2,7 +2,6 @@ var OrdersControllerModule = (function () {
 
   var showOrdersByTable = function () {
     //Todo implement
-	alert("good");
     var callback = {
 
         onSuccess: function(ordersList){
