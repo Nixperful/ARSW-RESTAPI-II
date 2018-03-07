@@ -69,7 +69,7 @@ var OrdersControllerModule = (function () {
             alert("There is a problem with our servers. We apologize for the inconvince, please try again later");
         }
     }
-    RestaurantRestController.getOrders(callback)
+    RestControllerModule.getOrders(callback)
   };
 
   var updateOrder = function () {
