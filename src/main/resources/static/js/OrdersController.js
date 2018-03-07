@@ -5,6 +5,7 @@ var OrdersControllerModule = (function () {
     var callback = {
 
         onSuccess: function(ordersList){
+			orderNumber=1;
             list = ordersList;
             document.getElementById('tableMenu').innerHTML = "";
             for (order in list) {
