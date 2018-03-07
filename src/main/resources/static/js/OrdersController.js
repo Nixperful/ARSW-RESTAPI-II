@@ -72,7 +72,6 @@ var OrdersControllerModule = (function () {
             alert("There is a problem with our servers. We apologize for the inconvince, please try again later");
         }
     }
-	console.log("HOLA");
     RestaurantRestController.getOrders(callback)
   };
 
