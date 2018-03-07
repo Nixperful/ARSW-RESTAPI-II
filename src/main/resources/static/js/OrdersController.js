@@ -2,7 +2,7 @@ var OrdersControllerModule = (function () {
 
   var showOrdersByTable = function () {
     //Todo implement
-
+	alert("good");
     var callback = {
 
         onSuccess: function(ordersList){
@@ -70,8 +70,7 @@ var OrdersControllerModule = (function () {
             alert("There is a problem with our servers. We apologize for the inconvince, please try again later");
         }
     }
-    RestaurantRestController.getOrders(callback);
-	alert("good");
+    RestaurantRestController.getOrders(callback)
   };
 
   var updateOrder = function () {
