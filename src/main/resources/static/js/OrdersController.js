@@ -64,15 +64,14 @@ var OrdersControllerModule = (function () {
                 ordersTable.appendChild(ord);
             }
 
-        
-
         },
         onFailed: function(err){
             console.log(err);
             alert("There is a problem with our servers. We apologize for the inconvince, please try again later");
         }
     }
-    RestaurantRestController.getOrders(callback)
+    RestaurantRestController.getOrders(callback);
+	alert("good");
   };
 
   var updateOrder = function () {
