@@ -7,6 +7,7 @@ var OrdersControllerModule = (function () {
 
         onSuccess: function(ordersList){
             list = ordersList;
+			console.log("HOLA");
             document.getElementById('tableMenu').innerHTML = "";
             for (order in list) {
                 var ordersTable = document.getElementById('tableMenu');
