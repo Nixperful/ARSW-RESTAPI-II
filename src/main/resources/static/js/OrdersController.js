@@ -126,8 +126,8 @@ var OrdersControllerModule = (function () {
 		var callback = {
             onSuccess: function (orderList) {
                 ordenes = orderList;
-                var tabla = document.getElementById('tableOrder');
                 document.getElementById('tableOrder').innerHTML = "";
+                var tabla = document.getElementById('tableOrder');
                 var top = document.createElement('tr');
                 var p = document.createElement('th');
                 p.style = "background-color: #3a82d2;  color: white ; ";
