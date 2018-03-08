@@ -119,13 +119,14 @@ var OrdersControllerModule = (function () {
 		}		
 	}
 	RestControllerModule.updateOrder(order,callback)
-	};
+};
 
 	var onLoad = function () {
 
 		var callback = {
             onSuccess: function (orderList) {
                 ordenes = orderList;
+                console.log("HOLA");
 
                 document.getElementById('tableOrder').innerHTML = "";
                 var tabla = document.getElementById('tableOrder');
