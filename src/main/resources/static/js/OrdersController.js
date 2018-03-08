@@ -123,6 +123,10 @@ var OrdersControllerModule = (function () {
 
 		var callback = {
 			onSuccess: function(){
+			},
+			onFailed: function(err){
+			console.log(err);
+			alert("There is a problem with our servers. We apologize for the inconvince, please try again later");
 		}
 		RestControllerModule.getOrders()
 	}
