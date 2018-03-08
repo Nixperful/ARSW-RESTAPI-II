@@ -103,7 +103,7 @@ var OrdersControllerModule = (function () {
 			var tr = document.createElement('tr');
 
             var td = document.createElement('td');
-            td.appendChild(document.createTextNode(product);
+            td.appendChild(document.createTextNode(product));
             tr.appendChild(td);
 
             var td = document.createElement('td');

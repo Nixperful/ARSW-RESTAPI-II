@@ -13,7 +13,7 @@ var RestControllerModule = (function () {
   var updateOrder = function (order, callback) {
 
 	axios.put('/orders/'+order.tableNumber,order)
-		.then(funcion(){
+		.then(function(){
 			callback.onSuccess();
 		})
             .catch(function(err){
