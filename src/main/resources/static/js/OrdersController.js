@@ -128,8 +128,9 @@ var OrdersControllerModule = (function () {
 			console.log(err);
 			alert("There is a problem with our servers. We apologize for the inconvince, please try again later");
 		}
-		RestControllerModule.getOrders()
 	}
+	RestControllerModule.getOrders()
+	};
 
 
 
