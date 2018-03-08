@@ -1,7 +1,7 @@
 var OrdersControllerModule = (function () {
 
   var showOrdersByTable = function () {
-    //Todo implement
+
     var callback = {
 
         onSuccess: function(ordersList){
@@ -73,8 +73,19 @@ var OrdersControllerModule = (function () {
     RestControllerModule.getOrders(callback)
   };
 
+
+
   var updateOrder = function () {
-    // todo implement
+	var actualOrder=document.getElementById('tables').value;
+    var callback = {
+        onSuccess: function(){
+        },
+        onFailed: function(err){
+            console.log(err);
+            alert("There is a problem with our servers. We apologize for the inconvince, please try again later");
+        }
+    }
+    RestControllerModule.updateOrder(order,callback)
   };
 
   var deleteOrderItem = function (itemName) {
@@ -82,14 +93,47 @@ var OrdersControllerModule = (function () {
   };
 
   var addItemToOrder = function (orderId, item) {
-    // todo implement
-  };
 
-  return {
-    showOrdersByTable: showOrdersByTable,
-    updateOrder: updateOrder,
-    deleteOrderItem: deleteOrderItem,
-    addItemToOrder: addItemToOrder
-  };
+	var callback = {
+
+        onSuccess: function(){
+			var product = item[0];
+			var quantity = item[1];
+			var orden= document.getElementById('tableOrder');
+			var tr = document.createElement('tr');
+
+            var td = document.createElement('td');
+            td.appendChild(document.createTextNode(product);
+            tr.appendChild(td);
+
+            var td = document.createElement('td');
+            td.appendChild(document.createTextNode(quantity));
+            tr.appendChild(td);            
+            orden.appendChild(tr);
+		},
+		onFailed: function(err){
+			console.log(err);
+			alert("There is a problem with our servers. We apologize for the inconvince, please try again later");
+		}		
+	}
+	RestControllerModule.updateOrder(order,callback)
+	};
+
+	var onLoad = function () {
+
+		var callback = {
+			onSuccess: function(){
+		}
+		RestControllerModule.getOrders()
+	}
+
+
+
+	  return {
+		showOrdersByTable: showOrdersByTable,
+		updateOrder: updateOrder,
+		deleteOrderItem: deleteOrderItem,
+		addItemToOrder: addItemToOrder
+	};
 
 })();

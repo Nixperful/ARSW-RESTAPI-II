@@ -11,16 +11,39 @@ var RestControllerModule = (function () {
   }
 
   var updateOrder = function (order, callback) {
-    // todo implement
+
+	axios.put('/orders/'+order.tableNumber,order)
+		.then(funcion(){
+			callback.onSuccess();
+		})
+            .catch(function(err){
+                callback.onFailed(err);
+		});
   };
 
   var deleteOrder = function (orderId, callback) {
-    // todo implement
-  };
+    axios.delete('/orders/'+orderId)
+            .then(function(){
+                callback.onSuccess();
+            })
+				.catch(function(err){
+					callback.onFailed(err);
+            });
+	};
 
   var createOrder = function (order, callback) {
-    // todo implement
+	//Create ORDER
   };
+
+  var getOrderById = function (orderId,callback){
+  	  axios.get('/orders/'+orderId)
+          .then(function (response) {
+              callback.onSuccess(response["data"]);
+          })
+          .catch(function (err) {
+              callback.onFailed(err);
+          });
+  }
 
   return {
     getOrders: getOrders,
