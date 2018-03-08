@@ -49,7 +49,8 @@ var RestControllerModule = (function () {
     getOrders: getOrders,
     updateOrder: updateOrder,
     deleteOrder: deleteOrder,
-    createOrder: createOrder
+    createOrder: createOrder,
+    getOrderById: getOrderById
   };
 
 })();
