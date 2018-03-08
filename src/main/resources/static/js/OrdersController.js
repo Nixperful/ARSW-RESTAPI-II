@@ -126,6 +126,7 @@ var OrdersControllerModule = (function () {
 		var callback = {
             onSuccess: function (orderList) {
                 ordenes = orderList;
+
                 document.getElementById('tableOrder').innerHTML = "";
                 var tabla = document.getElementById('tableOrder');
                 var top = document.createElement('tr');
