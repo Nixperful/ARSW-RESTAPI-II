@@ -1,6 +1,6 @@
 var OrdersControllerModule = (function () {
-
-  var ordenActual;
+    var ordenes;
+    var ordenActual;
   
   var showOrdersByTable = function () {
 
@@ -125,6 +125,7 @@ var OrdersControllerModule = (function () {
 
 		var callback = {
             onSuccess: function (orderList) {
+                ordenes = orderList;
                 document.getElementById('tableOrder').innerHTML = "";
 
                 var orden = document.getElementById('tableOrder');
