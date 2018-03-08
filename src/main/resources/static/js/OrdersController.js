@@ -1,6 +1,6 @@
 var OrdersControllerModule = (function () {
-    var ordenes;
-    var ordenActual;
+  var ordenes;
+  var ordenActual;
   
   var showOrdersByTable = function () {
 
