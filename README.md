@@ -4,6 +4,6 @@
 
 Nicolás Osorio Arias
 
-LINK HEROKU : https://restauranteci2018.herokuapp.com/
+LINK HEROKU : https://restaurant-api-2.herokuapp.com
 
 
