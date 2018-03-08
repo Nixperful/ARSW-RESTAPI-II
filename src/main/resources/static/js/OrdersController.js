@@ -127,7 +127,24 @@ var OrdersControllerModule = (function () {
             onSuccess: function (orderList) {
                 ordenes = orderList;
                 document.getElementById('tableOrder').innerHTML = "";
-
+                var top = document.createElement('tr');
+                var p = document.createElement('th');
+                p.style = "background-color: #3a82d2;  color: white ; ";
+                var c1 = document.createTextNode("Product");
+                p.appendChild(c1);
+                var q = document.createElement('th');
+                q.style = "background-color: #3a82d2;  color: white ; ";
+                var c2 = document.createTextNode("Quantity");
+                q.appendChild(c2);
+                var r = document.createElement('th');
+                r.style = "background-color: #cdd560 ";
+                var s = document.createElement('th');
+                s.style = "background-color: #915700 ";
+                top.appendChild(p);
+                top.appendChild(q);
+                top.appendChild(r);
+                top.appendChild(s);
+                
                 var orden = document.getElementById('tableOrder');
                 for (product in ordenActual.orderAmountsMap) {
                     var tr = document.createElement('tr');
