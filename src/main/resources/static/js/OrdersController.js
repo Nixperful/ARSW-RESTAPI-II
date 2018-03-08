@@ -125,7 +125,44 @@ var OrdersControllerModule = (function () {
 
 		var callback = {
             onSuccess: function (orderList) {
-                document.getElementById('tableMenu').innerHTML = "";
+                document.getElementById('tableOrder').innerHTML = "";
+
+                var orden = document.getElementById('tableOrder');
+                for (product in ordenActual.orderAmountsMap) {
+                    var tr = document.createElement('tr');
+                    var td1 = document.createElement('td');
+                    var input1 = document.createElement('input');
+                    input1.type = "text";
+                    input1.name = "item";
+                    input1.value = product;
+                    td1.appendChild(input1);
+                    var td2 = document.createElement('td');
+                    var input2 = document.createElement('input');
+                    input2.type = "number";
+                    input2.name = "quantity";
+                    input2.max = "9999";
+                    input2.min = "1";
+                    input2.style = "width:50%; margin-top:10%";
+                    input2.value = ordenActual.orderAmountsMap[product];
+                    td2.appendChild(input2);
+                    var td3 = document.createElement('td');
+                    var upt = document.createElement('a');
+                    upt.class = "btn btn- lg btn- primary";
+                    upt.role = "button"
+                    upt.appendChild(Update);
+                    td3.appendChild(upt);
+                    var td4 = document.createElement('td');
+                    var del = document.createElement('a');
+                    del.class = "btn btn-secondary my-2";
+                    del.role = "button"
+                    del.appendChild(Delete);
+                    td4.appendChild(del);
+                    tr.appendChild(td1);
+                    tr.appendChild(td2);
+                    tr.appendChild(td3);
+                    tr.appendChild(td4);
+                }
+
 			},
 			onFailed: function(err){
 			console.log(err);
