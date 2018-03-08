@@ -1,5 +1,7 @@
 var OrdersControllerModule = (function () {
 
+  var ordenActual;
+  
   var showOrdersByTable = function () {
 
     var callback = {
@@ -122,15 +124,30 @@ var OrdersControllerModule = (function () {
 	var onLoad = function () {
 
 		var callback = {
-			onSuccess: function(){
+            onSuccess: function (orderList) {
+                document.getElementById('tableMenu').innerHTML = "";
 			},
 			onFailed: function(err){
 			console.log(err);
 			alert("There is a problem with our servers. We apologize for the inconvince, please try again later");
-		}
-	}
-	RestControllerModule.getOrders()
-	};
+		    }
+	    }
+	RestControllerModule.getOrders(callback)
+    };
+
+    var changeOrder = function () {
+        var table = document.getElementById("tables").value;
+        var callback = {
+            onSuccess: function (order) {
+                ordenActual = order;
+            },
+            onFailed: function (err) {
+                console.log(err);
+                alert("There is a problem with our servers. We apologize for the inconvince, please try again later");
+            }
+        }
+        RestControllerModule.getElementById(table,callback)
+    };
 
 
 
