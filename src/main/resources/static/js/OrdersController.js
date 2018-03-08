@@ -214,7 +214,9 @@ var OrdersControllerModule = (function () {
 		showOrdersByTable: showOrdersByTable,
 		updateOrder: updateOrder,
 		deleteOrderItem: deleteOrderItem,
-		addItemToOrder: addItemToOrder
+        addItemToOrder: addItemToOrder,
+        onLoad: onLoad,
+        changeOrder: changeOrder
 	};
 
 })();
