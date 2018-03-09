@@ -124,7 +124,7 @@ var OrdersControllerModule = (function () {
 
 		var callback = {
             onSuccess: function (orderList) {
-                console.log("Complete SUCCESS");
+                
                 ordenes = orderList;
                 var tabla = document.getElementById('tableOrder');
                 tabla.innerHTML = "";   
@@ -187,6 +187,7 @@ var OrdersControllerModule = (function () {
                     tr.appendChild(td3);
                     tr.appendChild(td4);
                     tabla.appendChild(tr);
+                    console.log("Complete SUCCESS");
                 }
                 
                 
