@@ -199,7 +199,7 @@ var OrdersControllerModule = (function () {
         var table = document.getElementById("tables").value;
         var callback = {
             onSuccess: function (order) {
-                console.log("You change the order");
+                console.log("You change the order"+table);
                 ordenActual = order;
             },
             onFailed: function (err) {
