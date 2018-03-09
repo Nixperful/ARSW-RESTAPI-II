@@ -125,7 +125,7 @@ var OrdersControllerModule = (function () {
 
 		var callback = {
             onSuccess: function (orderList) {
-				(ordenActual==null){
+				if(ordenActual==null){
 					changeOrder();
 				}
 
