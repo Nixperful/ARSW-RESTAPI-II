@@ -125,7 +125,10 @@ var OrdersControllerModule = (function () {
 
 		var callback = {
             onSuccess: function (orderList) {
-				ordenes = orderList;
+                ordenes = orderList;
+                if (ordenActual == null) {
+                    changeOrder();
+                }
                 document.getElementById('tableOrder').innerHTML = "";
                 var tabla = document.getElementById('tableOrder');
                 var top = document.createElement('tr');
@@ -189,18 +192,16 @@ var OrdersControllerModule = (function () {
 			alert("There is a problem with our servers. We apologize for the inconvince, please try again later");
 		    }
         }
-        if (ordenActual == null) {
-            changeOrder();
-        }
+        
 	    RestControllerModule.getOrders(callback)
     };
 
     var changeOrder = function () {
         var table = document.getElementById("tables").value;
         var callback = {
-            onSuccess: function (order) {
+            onSuccess: function (nOrder) {
                 console.log("You change the order"+table);
-                ordenActual = order;
+                ordenActual = nOrder;
             },
             onFailed: function (err) {
                 console.log(err);
