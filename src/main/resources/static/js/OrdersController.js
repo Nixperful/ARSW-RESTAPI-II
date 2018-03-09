@@ -124,7 +124,7 @@ var OrdersControllerModule = (function () {
 
 		var callback = {
             onSuccess: function (orderList) {
-                console.log("Complete SUCCESS")
+                console.log("Complete SUCCESS");
                 ordenes = orderList;
                 document.getElementById('tableOrder').innerHTML = "";
                 var tabla = document.getElementById('tableOrder');
