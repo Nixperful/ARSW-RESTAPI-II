@@ -124,7 +124,7 @@ var OrdersControllerModule = (function () {
 
 		var callback = {
             onSuccess: function (orderList) {
-                var ordenActual;
+                console.log("Complete SUCCESS")
                 ordenes = orderList;
                 document.getElementById('tableOrder').innerHTML = "";
                 var tabla = document.getElementById('tableOrder');
@@ -145,7 +145,7 @@ var OrdersControllerModule = (function () {
                 top.appendChild(q);
                 top.appendChild(r);
                 top.appendChild(s);
-                console.log(ordenes.toString);
+                var ordenActual = null;
                 for (ord in ordenes) {
                     if (ord.tableNumber = document.getElementById("tables").value) {
                         ordenActual = ord;
