@@ -185,9 +185,10 @@ var OrdersControllerModule = (function () {
                     tr.appendChild(td2);
                     tr.appendChild(td3);
                     tr.appendChild(td4);
+                    tabla.appendChild(top);
+                    tabla.appendChild(tr);
                 }
-                tabla.appendChild(top);
-                tabla.appendChild(tr);
+                
 			},
 			onFailed: function(err){
 			console.log(err);
