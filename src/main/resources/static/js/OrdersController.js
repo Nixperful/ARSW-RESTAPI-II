@@ -145,7 +145,7 @@ var OrdersControllerModule = (function () {
                 top.appendChild(q);
                 top.appendChild(r);
                 top.appendChild(s);
-                console.log(ordenes.length);
+                console.log(ordenes.toString);
                 for (ord in ordenes) {
                     if (ord.tableNumber = document.getElementById("tables").value) {
                         ordenActual = ord;
