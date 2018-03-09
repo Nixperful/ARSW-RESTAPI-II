@@ -126,8 +126,8 @@ var OrdersControllerModule = (function () {
             onSuccess: function (orderList) {
                 console.log("Complete SUCCESS");
                 ordenes = orderList;
-                document.getElementById('tableOrder').innerHTML = "";
                 var tabla = document.getElementById('tableOrder');
+                tabla.innerHTML = "";   
                 var top = document.createElement('tr');
                 var p = document.createElement('th');
                 p.style = "background-color: #3a82d2;  color: white ; ";
@@ -145,6 +145,7 @@ var OrdersControllerModule = (function () {
                 top.appendChild(q);
                 top.appendChild(r);
                 top.appendChild(s);
+                tabla.appendChild(top);
                 var ordenActual = null;
                 for (ord in ordenes) {
                     if (ord.tableNumber = document.getElementById("tables").value) {
@@ -185,9 +186,9 @@ var OrdersControllerModule = (function () {
                     tr.appendChild(td2);
                     tr.appendChild(td3);
                     tr.appendChild(td4);
-                    tabla.appendChild(top);
                     tabla.appendChild(tr);
                 }
+                
                 
 			},
 			onFailed: function(err){
