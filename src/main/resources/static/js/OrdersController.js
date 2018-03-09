@@ -1,7 +1,6 @@
 var OrdersControllerModule = (function () {
   var ordenes;
-  var ordenActual;
-  
+    
   var showOrdersByTable = function () {
 
     var callback = {
@@ -125,10 +124,8 @@ var OrdersControllerModule = (function () {
 
 		var callback = {
             onSuccess: function (orderList) {
+                var ordenActual;
                 ordenes = orderList;
-                if (ordenActual == null) {
-                    changeOrder();
-                }
                 document.getElementById('tableOrder').innerHTML = "";
                 var tabla = document.getElementById('tableOrder');
                 var top = document.createElement('tr');
@@ -148,9 +145,14 @@ var OrdersControllerModule = (function () {
                 top.appendChild(q);
                 top.appendChild(r);
                 top.appendChild(s);
-                
+
+                for (ord in ordenes) {
+                    if (ord.tableNumber = document.getElementById("tables").value) {
+                        ordenActual = ord;
+                    }
+                }
                 var orden = document.getElementById('tableOrder');
-                for (product in ordenActual.orderAmountsMap) {
+                for (product in ordenActual.orderAmountsMap){
                     var tr = document.createElement('tr');
                     var td1 = document.createElement('td');
                     var input1 = document.createElement('input');
