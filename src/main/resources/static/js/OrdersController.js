@@ -125,11 +125,7 @@ var OrdersControllerModule = (function () {
 
 		var callback = {
             onSuccess: function (orderList) {
-				if(ordenActual==null){
-					changeOrder();
-				}
-
-                ordenes = orderList;
+				ordenes = orderList;
                 document.getElementById('tableOrder').innerHTML = "";
                 var tabla = document.getElementById('tableOrder');
                 var top = document.createElement('tr');
@@ -192,7 +188,10 @@ var OrdersControllerModule = (function () {
 			console.log(err);
 			alert("There is a problem with our servers. We apologize for the inconvince, please try again later");
 		    }
-	    }
+        }
+        if (ordenActual == null) {
+            changeOrder();
+        }
 	    RestControllerModule.getOrders(callback)
     };
 
