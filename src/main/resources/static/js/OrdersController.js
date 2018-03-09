@@ -125,9 +125,10 @@ var OrdersControllerModule = (function () {
 
 		var callback = {
             onSuccess: function (orderList) {
-				while (ordenActual==null){
+				(ordenActual==null){
 					changeOrder();
 				}
+
                 ordenes = orderList;
                 document.getElementById('tableOrder').innerHTML = "";
                 var tabla = document.getElementById('tableOrder');
