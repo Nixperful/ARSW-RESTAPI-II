@@ -150,13 +150,15 @@ var OrdersControllerModule = (function () {
                 nTable.appendChild(top);
                 var ordenActual;
                 for (ord in ordenes) {
-                    if (ord.tableNumber = document.getElementById("tables").value) {
+					var numberTable = "" + ordenes[ord].tableNumber;
+					if (numberTable == document.getElementById("tables").value) {
                         ordenActual = ord;
-                        console.log("Complete SUCCESS"+ ord.tableNumber);
+                        console.log("Complete SUCCESS"+ numberTable);
                     }
                     
 
                 }
+
                 var orden = document.getElementById('tableOrder');
 				var tbdy = document.createElement('tbody');
                 for (product in ordenActual.orderAmountsMap){
@@ -192,9 +194,9 @@ var OrdersControllerModule = (function () {
                     tr.appendChild(td2);
                     tr.appendChild(td3);
                     tr.appendChild(td4);
-                    tbody.appendChild(tr);  
+                    tbdy.appendChild(tr);  
                 }
-				nTable.appendChild(tbody);
+				nTable.appendChild(tbdy);
 				tabla.appendChild(nTable)
 			},
 			onFailed: function(err){
