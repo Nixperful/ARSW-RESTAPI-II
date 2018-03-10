@@ -158,6 +158,7 @@ var OrdersControllerModule = (function () {
 
                 }
                 var orden = document.getElementById('tableOrder');
+				var tbdy = document.createElement('tbody');
                 for (product in ordenActual.orderAmountsMap){
                     var tr = document.createElement('tr');
                     var td1 = document.createElement('td');
@@ -191,11 +192,10 @@ var OrdersControllerModule = (function () {
                     tr.appendChild(td2);
                     tr.appendChild(td3);
                     tr.appendChild(td4);
-                    nTable.appendChild(tr);
-                    
+                    tbody.appendChild(tr);  
                 }
-                
-                
+				nTable.appendChild(tbody);
+				tabla.appendChild(nTable)
 			},
 			onFailed: function(err){
 			console.log(err);
