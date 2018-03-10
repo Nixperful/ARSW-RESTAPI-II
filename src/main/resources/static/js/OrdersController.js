@@ -159,7 +159,7 @@ var OrdersControllerModule = (function () {
 
                 }
 
-                var orden = document.getElementById('tableOrder');
+               
 				var tbdy = document.createElement('tbody');
                 for (product in ordenActual.orderAmountsMap){
                     var tr = document.createElement('tr');
