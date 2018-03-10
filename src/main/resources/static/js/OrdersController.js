@@ -152,7 +152,7 @@ var OrdersControllerModule = (function () {
                 for (ord in ordenes) {
                     if (ord.tableNumber = document.getElementById("tables").value) {
                         ordenActual = ord;
-                        console.log("Complete SUCCESS");
+                        console.log("Complete SUCCESS"+ ord.tableNumber);
                     }
                     
 
