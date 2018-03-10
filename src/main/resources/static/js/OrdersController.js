@@ -127,7 +127,7 @@ var OrdersControllerModule = (function () {
                 
                 var ordenes = orderList;
                 var tabla = document.getElementById('tableOrder');
-                tabla.innerHTML = "";   
+                //tabla.innerHTML = "";   
                 var top = document.createElement('tr');
                 var p = document.createElement('th');
                 p.style = "background-color: #3a82d2;  color: white ; ";
