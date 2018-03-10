@@ -147,7 +147,7 @@ var OrdersControllerModule = (function () {
                 top.appendChild(q);
                 top.appendChild(r);
                 top.appendChild(s);
-                tabla.appendChild(top);
+                nTable.appendChild(top);
                 var ordenActual;
                 for (ord in ordenes) {
                     if (ord.tableNumber = document.getElementById("tables").value) {
@@ -191,7 +191,7 @@ var OrdersControllerModule = (function () {
                     tr.appendChild(td2);
                     tr.appendChild(td3);
                     tr.appendChild(td4);
-                    tabla.appendChild(tr);
+                    nTable.appendChild(tr);
                     
                 }
                 
